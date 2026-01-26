@@ -1,0 +1,66 @@
+[
+    {
+        "pathName": "Home",
+        "link": "/"
+    },
+    {
+        "pathName": "About Us",
+        "children": [
+            {
+                "pathName": "Who we are",
+                "link": "#",
+                "description": "Learn about the team behind our trusted rental platform."
+            },
+            {
+                "pathName": "Meet the team",
+                "link": "#",
+                "description": "Get to know the people who make our company great."
+            },
+            {
+                "pathName": "Our Values",
+                "link": "#",
+                "description": "What guides us,  transparency, integrity, and service.."
+            },
+            {
+                "pathName": "See what Our Rentals are saying",
+                "link": "#",
+                "description": "See real feedback from happy renters."
+            }
+        ]
+    },
+    {
+        "pathName": "All Apartments",
+        "children": [
+            {
+                "pathName": "All Serviced Apartments",
+                "link": "/all-apartments",
+                "description": "Fully furnished homes with hotel-style comfort."
+            },
+            {
+                "pathName": "Business Trips",
+                "link": "#",
+                "description": "Convenient, work-ready apartments for professionals on the move."
+            },
+            {
+                "pathName": "Lesuire and Vacation Apartments",
+                "link": "#",
+                "description": "Relaxing short-stay homes for holidays and getaways."
+            },
+            {
+                "pathName": "Cooperate Groups",
+                "link": "#",
+                "description": "Flexible stays designed for teams and business travellers."
+            },
+            {
+                "pathName": "Contractors Accomodations",
+                "link": "#",
+                "description": "Affordable, practical stays close to major project sites."
+            },
+            {
+                "pathName": "Property Management",
+                "link": "#",
+                "description": "Professional care and management for your rental property."
+            }
+        ]
+    }
+]
