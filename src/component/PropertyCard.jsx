@@ -11,7 +11,7 @@ export default function PropertyCard({
 }) {
   return (
     <div className="bg-white rounded-3xl overflow-hidden shadow-sm">
-      
+
       {/* Image */}
       <div className="relative">
         <img
@@ -36,7 +36,7 @@ export default function PropertyCard({
         {location && (
           <div className="flex items-center text-gray-500 text-sm mb-3">
             <MapPin size={14} className="mr-1" />
-            {location}
+            {typeof location === 'object' ? location.address : location}
           </div>
         )}
 
@@ -58,6 +58,7 @@ export default function PropertyCard({
           )}
         </div>
       </div>
+
     </div>
-  );
+    );
 }

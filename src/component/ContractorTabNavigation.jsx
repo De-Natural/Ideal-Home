@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const TabNavigation = ({ homeRef, galleryRef, facilitiesRef, locationRef }) => {
+const ContractorTabNavigation = () => {
   const [activeTab, setActiveTab] = useState("Overview");
 
   const tabs = [
-    { ref: homeRef, label: "Overview", id: "Overview" },
-    { ref: galleryRef, label: "Gallery", id: "Gallery" },
-    { ref: facilitiesRef, label: "Facilities", id: "Facilities" },
-    { ref: locationRef, label: "Location", id: "Location" }
+    { label: "Leisure", id: "Leisure" },
+    { label: "Business", id: "Business" },
+    { label: "Corporate Groups", id: "CorporateGroups" },
+    { label: "Contractors", id: "Contractors" }
   ];
 
   return (
@@ -18,11 +18,8 @@ const TabNavigation = ({ homeRef, galleryRef, facilitiesRef, locationRef }) => {
             key={tab.id}
             onClick={() => {
               setActiveTab(tab.id);
-              if (tab.ref.current) {
-                tab.ref.current.scrollIntoView({ behavior: "smooth" });
-              }
             }}
-            className={`px-6 w-40 py-3 text-sm font-medium transition-colors duration-200 rounded-3xl ${
+            className={`px-6 w-48 py-3 text-sm font-medium transition-colors duration-200 rounded-3xl ${
               activeTab === tab.id
                 ? "text-white bg-blue-800 rounded-3xl border-blue-600"
                 : "text-[#333] hover:text-gray-70"
@@ -36,4 +33,4 @@ const TabNavigation = ({ homeRef, galleryRef, facilitiesRef, locationRef }) => {
   );
 };
 
-export default TabNavigation;
+export default ContractorTabNavigation;

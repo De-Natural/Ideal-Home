@@ -1,5 +1,4 @@
 
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, ChevronUp } from "lucide-react";
@@ -136,12 +135,9 @@ const Navbar = () => {
                 >
                   Let Your Property
                 </button>
-                <button 
-                  className="bg-[#1C56BA] text-white text-xs md:text-base flex px-2 py-4 rounded-3xl items-center justify-center w-full"
-                  onClick={closeMenu}
-                >
+                <Link to="/contact-us" className="bg-[#1C56BA] text-white text-xs md:text-base flex px-2 py-4 rounded-3xl items-center justify-center w-full" onClick={closeMenu}>
                   Contact Us
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -200,12 +196,12 @@ const Navbar = () => {
 
           {/* Desktop CTA Buttons - Hidden on mobile */}
           <div className="hidden lg:flex gap-4 items-center">
-            <button className="bg-white text-black flex px-3 py-4 rounded-3xl items-center justify-center border border-[#1C56BA]">
+            <button className="bg-white text-black flex px-6 py-3 rounded-3xl items-center justify-center border border-[#1C56BA]">
               Let Your Property
             </button>
-            <button className="bg-[#1C56BA] text-white flex px-3 py-4 rounded-3xl items-center justify-center">
+           <Link to="/contact-us" className="bg-[#1C56BA] text-white flex px-6 py-3 rounded-3xl items-center justify-center">
               Contact Us
-            </button>
+           </Link>
           </div>
 
           <div>

@@ -1,16 +1,22 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "../assets/images/Bedroom 3.jpg"
 import TabNavigation from "../component/TabNavigation"
 import PropertySwiper from "../component/PropertySwiper"
 import RecentlyApartment from "../UI/RecentlyApartment"
-import { ViewApartmentsData } from "../data/viewApartments"
 import { getSelectedApartment } from "../utils/apartmentStorage"
 import Facilities from "../component/Facilities";
 import FindLocationMap from "../component/FindLocationMap";
 import BookingForm from "../component/BookingForm";
+import { ViewApartmentsData } from "../data/ViewApartments";
 
 function ViewApartment() {
     const [selectedApartment, setSelectedApartment] = useState(null);
+
+
+    const homeRef = useRef(null);
+    const galleryRef = useRef(null);
+    const facilitiesRef = useRef(null);
+    const locationRef = useRef(null);
 
     useEffect(() => {
         // Get the apartment data stored from HeroSlider
@@ -28,6 +34,7 @@ function ViewApartment() {
     return (
         <div className='flex flex-col gap-10'>
             <section className="h-screen relative flex flex-col items-center justify-center bg-cover bg-center"
+                ref={homeRef}
                 style={{
                     backgroundImage: `url(${displayImage})`
                 }}
@@ -40,7 +47,12 @@ function ViewApartment() {
                     </div>
 
                     <div className="w-full flex items-center justify-center">
-                        <TabNavigation />
+                        <TabNavigation
+                            homeRef={homeRef}
+                            galleryRef={galleryRef}
+                            facilitiesRef={facilitiesRef}
+                            locationRef={locationRef}
+                        />
                     </div>
 
                 </div>
@@ -49,7 +61,7 @@ function ViewApartment() {
 
             <div className="h-fit lg:h-96 w-full lg:w-4/5 mx-0 lg:mx-auto flex flex-col lg:flex-row items-center p-2 gap-12 mb-4">
                 <div className="h-fit lg:h-96 flex p-2 flex-col gap-8 w-full lg:w-3/4">
-                    <div className="flex p-2 items-center justify-between"> 
+                    <div className="flex p-2 items-center justify-between">
                         <h2 className="text-[#333] font-semibold text-lg lg:text-3xl leading-10 not-italic">{displayTitle}</h2>
                         <span className="h-8 lg:h-12 w-2/4 lg:w-52 p-0 lg:p-1 items-center justify-center flex gap-1 rounded-lg bg-[#DAEFFF] text-xs lg:text-lg font-medium leading-normal text-[#1C56BA]">{displayPrice}</span>
                     </div>
@@ -59,24 +71,24 @@ function ViewApartment() {
                 </div>
 
                 <div className="h-96 w-full lg:w-3/4">
-                    <img 
-                        src={displayImage} 
-                        alt={displayTitle} 
+                    <img
+                        src={displayImage}
+                        alt={displayTitle}
                         className="h-full w-full rounded-3xl object-cover object-center"
                     />
                 </div>
             </div>
 
-            <div className="w-full px-6 py-10">
+            <div className="w-full px-6 py-10" ref={galleryRef}>
                 <h2 className="text-[#333] text-center text-base md:text-3xl not-italic font-bold leading-7 mb-4">Apartment Gallery</h2>
                 <PropertySwiper properties={ViewApartmentsData} />
             </div>
 
-            <div>
+            <div ref={facilitiesRef}>
                 <Facilities />
             </div>
 
-            <FindLocationMap />
+            <FindLocationMap locationRef={locationRef} apartment={selectedApartment} />
 
             <BookingForm />
 

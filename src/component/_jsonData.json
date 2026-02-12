@@ -8,22 +8,22 @@
         "children": [
             {
                 "pathName": "Who we are",
-                "link": "#",
+                "link": "/about-us#who-we-are",
                 "description": "Learn about the team behind our trusted rental platform."
             },
             {
                 "pathName": "Meet the team",
-                "link": "#",
+                "link": "/about-us#meet-the-team",
                 "description": "Get to know the people who make our company great."
             },
             {
                 "pathName": "Our Values",
-                "link": "#",
+                "link": "/about-us#our-values",
                 "description": "What guides us,  transparency, integrity, and service.."
             },
             {
                 "pathName": "See what Our Rentals are saying",
-                "link": "#",
+                "link": "/testimonial",
                 "description": "See real feedback from happy renters."
             }
         ]
@@ -38,27 +38,27 @@
             },
             {
                 "pathName": "Business Trips",
-                "link": "#",
+                "link": "/business-apartment",
                 "description": "Convenient, work-ready apartments for professionals on the move."
             },
             {
                 "pathName": "Lesuire and Vacation Apartments",
-                "link": "#",
+                "link": "/leisure-apartment",
                 "description": "Relaxing short-stay homes for holidays and getaways."
             },
             {
                 "pathName": "Cooperate Groups",
-                "link": "#",
+                "link": "/cooperate-apartment",
                 "description": "Flexible stays designed for teams and business travellers."
             },
             {
                 "pathName": "Contractors Accomodations",
-                "link": "#",
+                "link": "/contractor-apartment",
                 "description": "Affordable, practical stays close to major project sites."
             },
             {
                 "pathName": "Property Management",
-                "link": "#",
+                "link": "/property-management-apartment",
                 "description": "Professional care and management for your rental property."
             }
         ]

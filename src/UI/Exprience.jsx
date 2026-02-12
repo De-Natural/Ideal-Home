@@ -2,6 +2,7 @@ import dinner from '../assets/images/dinner.png'
 import coverage from '../assets/images/coverage.png'
 import veranda from '../assets/images/veranda.png'
 import { SideArrow } from '../assets/Icons/SideArrow'
+import { Link } from 'react-router-dom'
 
 export default function Exprience() {
   return (
@@ -44,10 +45,10 @@ export default function Exprience() {
             <div className='w-3/4 lg:w-full flex flex-col text-white gap-4 items-center justify-center mt-5 mb-3'>
                 <p className='font-semibold text-lg lg:text-3xl leading-6 lg:leading-3 tracking-normal align-middle capitalize'>ready to find your apartment?</p>
                 <p className='font-normal text-sm lg:text-base leading-6 tracking-normal align-middle'>Contact one of our rental experts today and we’ll help you secure the perfect space, fast, safe, and stress-free.</p>
-                <button className='h-9 lg:h-12 w-44 rounded-3xl px-8 py-3 gap-2 bg-white text-[#1C56BA] flex items-center'>
+                <Link to="/contact-us" className='h-9 lg:h-12 w-44 rounded-3xl px-8 py-3 gap-2 bg-white text-[#1C56BA] flex items-center justify-center'>
                     Contact us 
-                    <SideArrow className="text-white" />
-                </button>
+                    <SideArrow className="text-[#1C56BA]" />
+                </Link>
             </div>
        </div>
        {/* <div className='w-full flex-1 bg-white' />
