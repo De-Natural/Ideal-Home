@@ -3,7 +3,67 @@ import { SearchIcon } from '../assets/Icons/SearchIcon'
 import  Image  from '../assets/images/3d-house-model-with-modern-architecture 1.png'
 import HeroSlider from '../component/HeroSlider'
 
+
+import img1 from "../assets/images/bedroom 1.jpg";
+import img2 from "../assets/images/bedroom 2.jpg";
+import img3 from "../assets/images/bedroom 3.jpg";
+import img4 from "../assets/images/bedroom 4.jpg";
+import img5 from "../assets/images/bedroom 5.jpg";
+import img6 from "../assets/images/bedroom 6.jpg";
+
 export default function AllServiceApartment() {
+  // Base apartment meta (titles/descriptions/prices stay the same)
+  const apartmentsBase = [
+    {
+      title: "Modern 2-Bedroom | Lekki Phase 1",
+      description:
+        "Our Crown Apartments provide a modern and welcoming home-from-home experience in the heart of Newcastle City Centre, ideal for business and leisure stays.",
+      price: "₦450,000 / month",
+    },
+    {
+      title: "Luxury Studio | Victoria Island",
+      description:
+        "A stylish studio designed for professionals who value comfort, elegance, and city access with premium amenities.",
+      price: "₦950,000 / month",
+    },
+    {
+      title: "Family Apartment | Ikoyi",
+      description:
+        "Spacious living with multiple bedrooms, modern kitchen, and secure surroundings—perfect for families.",
+      price: "₦750,000 / month",
+    },
+  ];
+
+  // Three different image sets (each image includes title + description)
+  const imagesSet1 = [
+    { src: img1, title: "Master Bedroom", description: "Spacious bedroom with natural light and modern decor." },
+    { src: img2, title: "Guest Bedroom", description: "Cozy bedroom featuring soft tones and comfortable bedding." },
+    { src: img3, title: "Cozy Corner", description: "Stylish bedroom with wooden accents and city view." },
+    { src: img4, title: "Panoramic Bedroom", description: "Elegant bedroom with plush headboard and ambient lighting." },
+    { src: img5, title: "Skylight Bedroom", description: "Bright bedroom with large windows and minimalist design." },
+    { src: img6, title: "Deluxe Bedroom", description: "Contemporary bedroom with tasteful art and soft textiles." },
+  ];
+  const imagesSet2 = [
+    { src: img2, title: "Guest Bedroom", description: "Cozy bedroom featuring soft tones and comfortable bedding." },
+    { src: img3, title: "Cozy Corner", description: "Stylish bedroom with wooden accents and city view." },
+    { src: img4, title: "Panoramic Bedroom", description: "Elegant bedroom with plush headboard and ambient lighting." },
+    { src: img5, title: "Skylight Bedroom", description: "Bright bedroom with large windows and minimalist design." },
+    { src: img6, title: "Deluxe Bedroom", description: "Contemporary bedroom with tasteful art and soft textiles." },
+    { src: img1, title: "Master Bedroom", description: "Spacious bedroom with natural light and modern decor." },
+  ];
+  const imagesSet3 = [
+    { src: img3, title: "Cozy Corner", description: "Stylish bedroom with wooden accents and city view." },
+    { src: img4, title: "Panoramic Bedroom", description: "Elegant bedroom with plush headboard and ambient lighting." },
+    { src: img5, title: "Skylight Bedroom", description: "Bright bedroom with large windows and minimalist design." },
+    { src: img6, title: "Deluxe Bedroom", description: "Contemporary bedroom with tasteful art and soft textiles." },
+    { src: img1, title: "Master Bedroom", description: "Spacious bedroom with natural light and modern decor." },
+    { src: img2, title: "Guest Bedroom", description: "Cozy bedroom featuring soft tones and comfortable bedding." },
+  ];
+
+  const apartmentsA = apartmentsBase.map((a) => ({ ...a, images: imagesSet1 }));
+  const apartmentsB = apartmentsBase.map((a) => ({ ...a, images: imagesSet2 }));
+  const apartmentsC = apartmentsBase.map((a) => ({ ...a, images: imagesSet3 }));
+
   return (
     <div className='flex flex-col gap-10'>
        <section className="h-screen relative flex flex-col items-center justify-center bg-cover bg-center"
@@ -32,9 +92,9 @@ export default function AllServiceApartment() {
        </section>
 
        <div className='flex flex-col gap-14 items-center justify-around mb-10'>
-        <HeroSlider />
-        <HeroSlider/>
-        <HeroSlider />
+        <HeroSlider apartments={apartmentsA} />
+        <HeroSlider apartments={apartmentsB} />
+        <HeroSlider apartments={apartmentsC} />
        </div>
     </div>
   )
