@@ -1,5 +1,5 @@
 import { Car } from "lucide-react";
-import { DoubleTickIcon } from "../assets/icons/DoubleTickIcon";
+import { DoubleTickIcon } from "../assets/Icons/DoubleTickIcon";
 import { CarIcon } from "../assets/Icons/CarIcon";
 import { HumanIcon } from "../assets/Icons/HumanIcon";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
