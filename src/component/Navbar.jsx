@@ -2,8 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import CompanyLogo from '../assets/images/company logo.jpg';
-// import CompanyLogo from '../assets/images/Ideal_home_logo-removebg-preview.png';
+import CompanyLogo from '../assets/images/company-logo.jpg';
 import FlagComponent from '../assets/images/FlagComponents.png'
 import { HamburgerIcon } from "../assets/Icons/HamburgerIcon";
 import { CloseIcon } from "../assets/Icons/CloseIcon";

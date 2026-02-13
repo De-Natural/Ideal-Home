@@ -4,7 +4,7 @@ import { InstagramIcon } from '../assets/Icons/InstagramIcon';
 import { LinkedinIcon } from '../assets/Icons/LinkedinIcon';
 import { SendIcon } from '../assets/Icons/SendIcon';
 import { TiwtterIcon } from '../assets/Icons/TiwtterIcon';
-import CompanyLogo from '../assets/images/Week2week Serviced Apartments Newcastle Logo.png';
+import CompanyLogo from '../assets/images/week2week-logo.png';
 
 const Footer = () => {
   return (
@@ -69,12 +69,12 @@ const Footer = () => {
               <h4 className="text-smlg:text-base leading-[100%] font-[inter] font-bold mb-6">Support</h4>
               <div className="flex flex-col gap-3">
                 <Link to="/faq">
-                <p className="font-[inter] font-normal not-italic text-sm leading-[100%] hover:text-blue-600 cursor-pointer">FAQs</p>
+                  <p className="font-[inter] font-normal not-italic text-sm leading-[100%] hover:text-blue-600 cursor-pointer">FAQs</p>
                 </Link>
                 <p className="font-[inter] font-normal not-italic text-sm leading-[100%] hover:text-blue-600 cursor-pointer">Help Centre</p>
                 <p className="font-[inter] font-normal not-italic text-sm leading-[100%] hover:text-blue-600 cursor-pointer">Terms & Conditions</p>
                 <Link to="/contact-us">
-                <p className="font-[inter] font-normal not-italic text-sm leading-[100%] hover:text-blue-600 cursor-pointer">Contact Us</p>
+                  <p className="font-[inter] font-normal not-italic text-sm leading-[100%] hover:text-blue-600 cursor-pointer">Contact Us</p>
                 </Link>
                 <p className="font-[inter] font-normal not-italic text-sm leading-[100%] hover:text-blue-600 cursor-pointer">+44(0)191 2813129</p>
               </div>

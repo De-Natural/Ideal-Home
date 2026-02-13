@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import mainImage from "../assets/images/image 337.png"
+import mainImage from "../assets/images/image-337.png"
 import AddedApartmentSwiper from "../component/AddedApartmentSwiper"
 import CategoryTags from "../component/CategoryTags"
 import ApartmentNearYou from "../UI/ApartmentNearYou"
@@ -21,7 +21,7 @@ export default function Home() {
                 }}
             >
                 <div className="h-full w-full absolute inset-0 bg-black bg-opacity-50"></div>
-               
+
                 <div className="h-60 w-full text-center flex flex-col items-center justify-around gap-1 md:gap-10 text-white top-2 md:top-20 z-30">
                     <div className=" w-full md:w-2/3 flex flex-col gap-0 md:gap-4">
                         <h2 className="font-[Montserrat] font-semibold text-xl lg:text-5xl text-center  lg:leading-[74px] space-y-6 tracking-normal align-middle">{t('home.hero_title')}</h2>
@@ -36,9 +36,9 @@ export default function Home() {
                         </Link>
                         <Link to={"/property-management-apartment"}>
                             <button className="bg-[#1C56BA] text-white flex items-center text-xs md:text-base gap-3 rounded-full px-6 md:px-10 py-3 md:py-4">
-                                 {t('home.hero_cta')}
+                                {t('home.hero_cta')}
                             </button>
-                            
+
                         </Link>
                     </div>
                 </div>
