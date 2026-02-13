@@ -1,5 +1,5 @@
 import { Check } from "lucide-react";
-import { DoubleTickIcon } from "../assets/icons/DoubleTickIcon";
+import { DoubleTickIcon } from "../assets/Icons/DoubleTickIcon";
 
 const leftFacilities = [
   "Fully fitted equipped kitchen including all appliances",

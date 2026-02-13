@@ -6,17 +6,17 @@ import TestimonialSection from "../UI/TestimonialSection";
 import SocialFollow from "../component/SocialFollow";
 import AmenitiesCard from "../component/AmenitiesCard";
 import HomeAminities from "../UI/HomeAminaties";
-import { ViewApartmentsData } from "../data/viewApartments"
+import { ViewApartmentsData } from "../data/ViewApartments"
 import RecentlyApartment from "../UI/RecentlyApartment";
 import ContractorTabNavigation from "../component/ContractorTabNavigation";
 
 function LeisureApartment() {
-    
-;
+
+    ;
     return (
         <div className='flex flex-col gap-10'>
             <section className="h-screen relative flex flex-col items-center justify-center bg-cover bg-center"
-                
+
                 style={{
                     backgroundImage: `url(${LeisureImage})`
                 }}
@@ -29,7 +29,7 @@ function LeisureApartment() {
                     </div>
 
                     <div className="w-full flex items-center justify-center">
-                       <ContractorTabNavigation />
+                        <ContractorTabNavigation />
                     </div>
 
                 </div>
@@ -38,12 +38,12 @@ function LeisureApartment() {
 
             <div className="h-fit lg:h-96 w-full lg:w-4/5 mx-0 lg:mx-auto flex flex-col lg:flex-row items-center p-2 gap-12 mb-4">
                 <div className="h-fit lg:h-96 flex p-2 flex-col gap-8 w-full lg:w-3/4">
-                    <div className="flex p-2 items-center justify-between"> 
+                    <div className="flex p-2 items-center justify-between">
                         <h2 className="text-[#333] font-semibold text-lg lg:text-3xl leading-10 not-italic">Apartment for Leisure</h2>
                     </div>
 
                     <div className="flex items-center flex-col gap-4">
-                       <p className="font-[poppins] text-base font-normal not-italic leading-normal">If you are considering a much-needed leisure break in the Newcastle upon Tyne area either alone, with a partner or with your family, then Week2Week can provide you with a beautiful apartment that will meet your needs. We have apartments close by to all of the local attractions at the centre of it all.</p>
+                        <p className="font-[poppins] text-base font-normal not-italic leading-normal">If you are considering a much-needed leisure break in the Newcastle upon Tyne area either alone, with a partner or with your family, then Week2Week can provide you with a beautiful apartment that will meet your needs. We have apartments close by to all of the local attractions at the centre of it all.</p>
 
                         <p className="font-[poppins] text-base font-normal not-italic leading-normal">Our serviced apartments provide you with a home from home feel coupled with the benefits of a luxury hotel giving you the advantages of both experiences.</p>
 
@@ -51,9 +51,9 @@ function LeisureApartment() {
                     </div>
                 </div>
 
-                <div className="h-96 w-full lg:w-3/4"> 
-                    <img 
-                        src={dinner} 
+                <div className="h-96 w-full lg:w-3/4">
+                    <img
+                        src={dinner}
                         alt="Leisure Apartment"
                         className="h-full w-full rounded-3xl object-cover object-center"
                     />
@@ -62,15 +62,15 @@ function LeisureApartment() {
 
             <div>
                 <HomeAminities
-                    heading="Facilities you Enjoy in Our Leisure Apartments" 
-                    description="We simplify the rental experience, giving you verified listings, transparent pricing, and homes that feel like you belong" 
+                    heading="Facilities you Enjoy in Our Leisure Apartments"
+                    description="We simplify the rental experience, giving you verified listings, transparent pricing, and homes that feel like you belong"
                 />
             </div>
-            
+
             <div className="w-full px-6 py-10">
-                <RecentlyApartment 
-                    heading="See Our Comfortable Accommodation Just for you." 
-                    description="Discover cozy, stylish apartments designed for holidays, weekend trips, and refreshing escapes." 
+                <RecentlyApartment
+                    heading="See Our Comfortable Accommodation Just for you."
+                    description="Discover cozy, stylish apartments designed for holidays, weekend trips, and refreshing escapes."
                 />
             </div>
 

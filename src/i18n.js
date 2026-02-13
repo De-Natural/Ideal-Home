@@ -37,6 +37,10 @@ i18n
                         "hero_title": "Find your next apartment, simple, verified, and stress-free.",
                         "hero_desc": "Browse hundreds of apartments, condos, and homes for rent. All listings are verified and ready for you to move in.",
                         "hero_cta": "Find an Apartment"
+                    },
+                    "faq": {
+                        "title": "Frequently Asked Questions",
+                        "subtitle": "Everything you need to know about our apartments and booking process."
                     }
                 }
             },
@@ -65,6 +69,10 @@ i18n
                         "hero_title": "寻找您的下一个公寓，简单、经核实且无压力。",
                         "hero_desc": "浏览数百个出租公寓、共管公寓和住宅。所有房源均经过核实，您可以随时入住。",
                         "hero_cta": "寻找公寓"
+                    },
+                    "faq": {
+                        "title": "常见问题解答",
+                        "subtitle": "关于我们的公寓和预订流程您需要了解的一切。"
                     }
                 }
             },
@@ -93,6 +101,10 @@ i18n
                         "hero_title": "Wa iyẹwu rẹ ti n bọ, rọrun, ti a fọwọsi, ati laisi aapọn.",
                         "hero_desc": "Ṣawari awọn ọgọọgọrun ti awọn iyẹwu, awọn ile nla, ati awọn ile fun iyalo. Gbogbo awọn atokọ jẹ timo ati ṣetan fun ọ lati gbe wọle.",
                         "hero_cta": "Wa Iyẹwu kan"
+                    },
+                    "faq": {
+                        "title": "Awọn ibeere ti a nbeere nigbagbogbo",
+                        "subtitle": "Ohun gbogbo ti o nilo lati mọ nipa awọn iyẹwu wa ati ilana gbigba."
                     }
                 }
             },
@@ -121,6 +133,10 @@ i18n
                         "hero_title": "Finden Sie Ihr nächstes Apartment, einfach, verifiziert und stressfrei.",
                         "hero_desc": "Durchsuchen Sie hunderte von Wohnungen, Eigentumswohnungen und Häusern zur Miete. Alle Angebote sind verifiziert und bereit für Ihren Einzug.",
                         "hero_cta": "Wohnung finden"
+                    },
+                    "faq": {
+                        "title": "Häufig gestellte Fragen",
+                        "subtitle": "Alles, was Sie über unsere Apartments und den Buchungsprozess wissen müssen."
                     }
                 }
             },
@@ -149,6 +165,10 @@ i18n
                         "hero_title": "Bir sonraki dairenizi basit, doğrulanmış ve stressiz bir şekilde bulun.",
                         "hero_desc": "Kiralık yüzlerce daire arasından seçim yapın. Tüm ilanlar doğrulanmış ve hazırdır.",
                         "hero_cta": "Daire Bul"
+                    },
+                    "faq": {
+                        "title": "Sıkça Sorulan Sorular",
+                        "subtitle": "Dairelerimiz ve rezervasyon süreci hakkında bilmeniz gereken her şey."
                     }
                 }
             },
@@ -177,6 +197,10 @@ i18n
                         "hero_title": "Trova il tuo prossimo appartamento, semplice, verificato e senza stress.",
                         "hero_desc": "Sfoglia centinaia di appartamenti in affitto. Tutti gli annunci sono verificati.",
                         "hero_cta": "Trova Appartamento"
+                    },
+                    "faq": {
+                        "title": "Domande Frequenti",
+                        "subtitle": "Tutto quello che c'è da sapere sui nostri appartamenti e sul processo di prenotazione."
                     }
                 }
             },
@@ -205,6 +229,10 @@ i18n
                         "hero_title": "간편하고 검증된 당신의 다음 보금자리를 찾아보세요.",
                         "hero_desc": "수백 개의 아파트를 확인하세요. 모든 매물은 검증된 상태입니다.",
                         "hero_cta": "아파트 찾기"
+                    },
+                    "faq": {
+                        "title": "자주 묻는 질문",
+                        "subtitle": "아파트 및 예약 프로세스에 대해 알아야 할 모든 것."
                     }
                 }
             }
