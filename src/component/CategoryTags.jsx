@@ -7,46 +7,50 @@ import { ContractorIcon } from "../assets/Icons/ContractorIcon";
 
 const CategoryTags = () => {
   const categories = [
-    { 
-      id: 1, 
-      name: "Leisure", 
-      emoji: <LeisureIcon />, 
-      path: "/leisure-apartments",
+    {
+      id: 1,
+      name: "Leisure",
+      emoji: <LeisureIcon />,
+      path: "/leisure-apartment",
       description: "Vacation and holiday stays"
     },
-    { 
-      id: 2, 
-      name: "Business", 
-      emoji: <BusinessIcon />, 
-      path: "/business-travel",
+    {
+      id: 2,
+      name: "Business",
+      emoji: <BusinessIcon />,
+      path: "/business-apartment",
       description: "Work-ready accommodations"
     },
-    { 
-      id: 3, 
-      name: "Cooperate Groups", 
-      emoji: <CooperateGroupIcon />, 
-      path: "/corporate-groups",
+    {
+      id: 3,
+      name: "Corperate Groups",
+      emoji: <CooperateGroupIcon />,
+      path: "/cooperate-apartment",
       description: "Team and group stays"
     },
-    { 
-      id: 4, 
-      name: "Contractors", 
-      emoji: <ContractorIcon />, 
-      path: "/contractor-accommodation",
+    {
+      id: 4,
+      name: "Contractors",
+      emoji: <ContractorIcon />,
+      path: "/contractor-apartment",
       description: "Project site stays"
     }
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-2 p-2 md:grid-cols-4 md:gap-4 absolute bottom-2 md:bottom-10 w-full lg:w-2/3 items-center justify-around">
+    <div className="flex flex-wrap justify-center gap-4 absolute bottom-4 md:bottom-12 w-full px-4 z-40">
       {categories.map((category) => (
         <Link
           key={category.id}
           to={category.path}
-          className="flex flex-nowrap md:flex-row items-center gap-2 md:gap-2 bg-[#ffffff] hover:bg-gray-200 border border-gray-300 rounded-full px-2 md:px-10 py-1 md:py-3 transition-all duration-200 hover:scale-105 hover:shadow-md"
+          className="flex items-center gap-3 bg-white border border-gray-100 rounded-full px-4 md:px-10 py-2 md:py-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 shadow-sm group"
         >
-          <span className="text-xs font-normal md:font-medium text-gray-700">{category.name}</span>
-          <span className="text-sm md:text-md">{category.emoji}</span>
+          <span className="text-sm md:text-lg font-bold text-[#1C56BA] whitespace-nowrap">
+            {category.name}
+          </span>
+          <span className="flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+            {category.emoji}
+          </span>
         </Link>
       ))}
     </div>

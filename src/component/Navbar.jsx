@@ -2,13 +2,17 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, ChevronUp } from "lucide-react";
-import CompanyLogo from '../assets/images/Week2week Serviced Apartments Newcastle Logo.png';
+import CompanyLogo from '../assets/images/company logo.jpg';
+// import CompanyLogo from '../assets/images/Ideal_home_logo-removebg-preview.png';
 import FlagComponent from '../assets/images/FlagComponents.png'
 import { HamburgerIcon } from "../assets/Icons/HamburgerIcon";
 import { CloseIcon } from "../assets/Icons/CloseIcon";
 import navData from "./_jsonData.json"
+import { useTranslation } from "react-i18next";
+import LanguageSelector from "./LanguageSelector";
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -30,7 +34,7 @@ const Navbar = () => {
   const handleDropdownLeave = () => {
     setOpenDropdown(null);
   };
-  
+
 
   return (
     <nav className="font-sans w-full">
@@ -46,11 +50,13 @@ const Navbar = () => {
         <div className="container mx-auto flex justify-between items-center mb-2">
           {/* Logo */}
           <div className="">
-            <img 
-              src={CompanyLogo} 
-              alt="Company Logo" 
-              className="h-9 lg:h-24 w-11 lg:w-32" 
-            />
+            <Link to="/">
+              <img
+                src={CompanyLogo}
+                alt="Company Logo"
+                className="h-9 lg:h-24 w-11 lg:w-32 rounded-lg"
+              />
+            </Link>
           </div>
 
           {/* Hamburger Menu Button - Mobile Only */}
@@ -77,22 +83,21 @@ const Navbar = () => {
 
           {/* Mobile Navigation Menu */}
           <div
-            className={`fixed top-0 left-0 w-full bg-white p-6 z-40 transition-transform duration-300 ease-in-out lg:hidden ${
-              isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-            }`}
+            className={`fixed top-0 left-0 w-full bg-white p-6 z-40 transition-transform duration-300 ease-in-out lg:hidden ${isMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+              }`}
           >
             <div className="max-h-[80vh] overflow-y-auto p-6 mt-20">
               {/* Mobile Menu Items */}
               <div className="flex items-start flex-col gap-y-6">
                 {navData?.map((data, ind) => (
                   data.pathName === "Home" ? (
-                    <a 
+                    <a
                       key={ind}
-                      href={data.link} 
+                      href={data.link}
                       className="text-gray-800 hover:text-black font-medium text-base md:text-lg transition-colors duration-200"
                       onClick={closeMenu}
                     >
-                      {data.pathName}
+                      {t(`navbar.nav.${data.pathName.toLowerCase().replace(/ /g, '_')}`)}
                     </a>
                   ) : (
                     <div key={ind} className="relative w-full">
@@ -100,20 +105,20 @@ const Navbar = () => {
                         onClick={() => setOpenDropdown(openDropdown === data.pathName ? null : data.pathName)}
                         className="text-gray-800 hover:text-black font-medium text-base md:text-lg flex items-center justify-between w-full transition-colors duration-200"
                       >
-                        {data.pathName}
+                        {t(`navbar.nav.${data.pathName.toLowerCase().replace(/ /g, '_')}`)}
                         {openDropdown === data.pathName ? (
                           <ChevronUp size={18} />
                         ) : (
                           <ChevronDown size={18} />
                         )}
                       </button>
-                      
+
                       {openDropdown === data.pathName && (
                         <div className="mt-2 ml-4 bg-white rounded-md">
                           <div className="flex flex-col items-start gap-y-4 p-4">
                             {data?.children?.map((child, childInd) => (
                               <Link key={childInd} to={child.link} className="" onClick={closeMenu}>
-                                <h2 className="font-[Montserrat] text-sm md:text-base not-italic font-semibold leading-normal text-black hover:text-[#1C56BA]">{child.pathName}</h2>
+                                <h2 className="font-[Montserrat] text-sm md:text-base not-italic font-semibold leading-normal text-black hover:text-[#1C56BA]">{t(`navbar.nav.${child.pathName.toLowerCase().replace(/ /g, '_')}`)}</h2>
                                 {child.description && (
                                   <p className="text-[#979797] flex font-[Montserrat] text-xs not-italic font-normal leading-4">{child.description}</p>
                                 )}
@@ -129,14 +134,11 @@ const Navbar = () => {
 
               {/* Mobile CTA Buttons */}
               <div className="mt-8 flex gap-4 flex-row md:flex-col gap-y-4">
-                <button 
-                  className="bg-white text-black text-xs md:text-base flex px-2 py-4 rounded-3xl items-center justify-center border border-[#1C56BA] w-full"
-                  onClick={closeMenu}
-                >
-                  Let Your Property
-                </button>
+                <Link to="/property-management-apartment" className="bg-white text-black text-xs md:text-base flex px-2 py-4 rounded-3xl items-center justify-center border border-[#1C56BA] w-full" onClick={closeMenu}>
+                  {t('navbar.let_property')}
+                </Link>
                 <Link to="/contact-us" className="bg-[#1C56BA] text-white text-xs md:text-base flex px-2 py-4 rounded-3xl items-center justify-center w-full" onClick={closeMenu}>
-                  Contact Us
+                  {t('navbar.contact_us')}
                 </Link>
               </div>
             </div>
@@ -146,15 +148,15 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-8">
             {navData?.map((data, ind) => (
               data.pathName === "Home" ? (
-                <a 
+                <a
                   key={ind}
-                  href={data.link} 
+                  href={data.link}
                   className="text-gray-800 hover:text-black font-medium text-lg transition-colors duration-200"
                 >
-                  {data.pathName}
+                  {t(`navbar.nav.${data.pathName.toLowerCase().replace(/ /g, '_')}`)}
                 </a>
               ) : (
-                <div 
+                <div
                   key={ind}
                   className="relative group"
                   onMouseEnter={() => handleDropdownEnter(data.pathName)}
@@ -163,16 +165,16 @@ const Navbar = () => {
                   <button
                     className="text-gray-800 hover:text-black font-medium text-lg flex items-center gap-1 transition-colors duration-200"
                   >
-                    {data.pathName}
+                    {t(`navbar.nav.${data.pathName.toLowerCase().replace(/ /g, '_')}`)}
                     {openDropdown === data.pathName ? (
                       <ChevronUp size={18} />
                     ) : (
                       <ChevronDown size={18} />
                     )}
                   </button>
-                  
+
                   {openDropdown === data.pathName && (
-                    <div 
+                    <div
                       className="absolute left-0 mt-2 bg-white rounded-md shadow-lg border border-gray-200 z-50"
                       onMouseEnter={() => handleDropdownEnter(data.pathName)}
                       onMouseLeave={handleDropdownLeave}
@@ -180,7 +182,7 @@ const Navbar = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 w-[650px] px-8 py-10 content-start gap-10">
                         {data?.children?.map((child, childInd) => (
                           <Link key={childInd} to={child.link} className="flex flex-col gap-2">
-                            <h2 className="font-[Montserrat] text-base not-italic font-semibold leading-[100%] text-black hover:text-[#1C56BA]">{child.pathName}</h2>
+                            <h2 className="font-[Montserrat] text-base not-italic font-semibold leading-[100%] text-black hover:text-[#1C56BA]">{t(`navbar.nav.${child.pathName.toLowerCase().replace(/ /g, '_')}`)}</h2>
                             {child.description && (
                               <p className="text-[#979797] font-[Montserrat] text-xs not-italic font-normal leading-normal">{child.description}</p>
                             )}
@@ -196,16 +198,16 @@ const Navbar = () => {
 
           {/* Desktop CTA Buttons - Hidden on mobile */}
           <div className="hidden lg:flex gap-4 items-center">
-            <button className="bg-white text-black flex px-6 py-3 rounded-3xl items-center justify-center border border-[#1C56BA]">
-              Let Your Property
-            </button>
-           <Link to="/contact-us" className="bg-[#1C56BA] text-white flex px-6 py-3 rounded-3xl items-center justify-center">
-              Contact Us
-           </Link>
+            <Link to="/property-management-apartment" className="bg-white text-black flex px-6 py-3 rounded-3xl items-center justify-center border border-[#1C56BA]">
+              {t('navbar.let_property')}
+            </Link>
+            <Link to="/contact-us" className="bg-[#1C56BA] text-white flex px-6 py-3 rounded-3xl items-center justify-center">
+              {t('navbar.contact_us')}
+            </Link>
           </div>
 
-          <div>
-            <img src={FlagComponent} alt="" />
+          <div className="flex items-center">
+            <LanguageSelector />
           </div>
         </div>
       </div>
