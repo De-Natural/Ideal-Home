@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useParams } from "react-router-dom";
 import Image from "../assets/images/Bedroom 3.jpg"
 import TabNavigation from "../component/TabNavigation"
 import PropertySwiper from "../component/PropertySwiper"
@@ -8,8 +9,10 @@ import Facilities from "../component/Facilities";
 import FindLocationMap from "../component/FindLocationMap";
 import BookingForm from "../component/BookingForm";
 import { ViewApartmentsData } from "../data/ViewApartments";
+import { featuredProperties } from "../data/properties";
 
 function ViewApartment() {
+    const { id } = useParams();
     const [selectedApartment, setSelectedApartment] = useState(null);
 
 
@@ -19,12 +22,21 @@ function ViewApartment() {
     const locationRef = useRef(null);
 
     useEffect(() => {
-        // Get the apartment data stored from HeroSlider
+        // Priority 1: Try to get property from URL parameter
+        if (id) {
+            const property = featuredProperties.find(p => p.id === parseInt(id));
+            if (property) {
+                setSelectedApartment(property);
+                return;
+            }
+        }
+
+        // Priority 2: Fall back to apartmentStorage (existing functionality)
         const apartment = getSelectedApartment();
         if (apartment) {
             setSelectedApartment(apartment);
         }
-    }, []);
+    }, [id]);
 
     // Use selected apartment data if available, otherwise use defaults
     const displayImage = selectedApartment?.image || Image;

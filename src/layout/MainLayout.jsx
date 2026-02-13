@@ -2,10 +2,12 @@ import { Outlet } from "react-router";
 import Navbar from "../component/Navbar";
 import Exprience from "../UI/Exprience";
 import Footer from "../UI/Footer";
+import ScrollToTop from "../component/ScrollToTop";
 
 export default function MainLayout() {
   return (
     <div className="flex w-full flex-col gap-6">
+      <ScrollToTop />
       <Navbar />
       <main className="flex-1">
         <Outlet /> {/* Render matched child route here */}

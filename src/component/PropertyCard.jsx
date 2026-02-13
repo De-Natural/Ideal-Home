@@ -1,6 +1,8 @@
 import { MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function PropertyCard({
+  id,
   image,
   tag,
   title,
@@ -52,13 +54,15 @@ export default function PropertyCard({
 
           {/* View Details Button - Only show if viewDetails prop is passed */}
           {viewDetails && (
-            <button className="text-blue-600 text-sm font-medium hover:underline">
-              View Details →
-            </button>
+            <Link to={`/view-apartment/${id}`}>
+              <button className="text-blue-600 text-sm font-medium hover:underline">
+                View Details →
+              </button>
+            </Link>
           )}
         </div>
       </div>
 
     </div>
-    );
+  );
 }

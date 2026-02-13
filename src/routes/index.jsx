@@ -15,6 +15,7 @@ import ContractorApartment from "../pages/ContractorApartment";
 import PropertyManagementApartment from "../pages/PropertyManagementApartment";
 import TestimonalPage from "../pages/TestimonalPage";
 import AboutUsPage from "../pages/AboutUsPage";
+import FAQ from "../pages/FAQ";
 
 
 
@@ -26,13 +27,14 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "all-apartments", element: <AllServiceApartment /> },
-      { path: "view-apartment", element: <ViewApartment /> },
+      { path: "view-apartment/:id?", element: <ViewApartment /> },
       { path: "leisure-apartment", element: <LeisureApartment /> },
       { path: "business-apartment", element: <BusinessApartment /> },
       { path: "cooperate-apartment", element: <CooperateApartment /> },
       { path: "contractor-apartment", element: <ContractorApartment /> },
       { path: "property-management-apartment", element: <PropertyManagementApartment /> },
       { path: "about-us", element: <AboutUsPage /> },
+      { path: "faq", element: <FAQ /> },
     ],
   },
   // Standalone contact route (not a child of the main layout)

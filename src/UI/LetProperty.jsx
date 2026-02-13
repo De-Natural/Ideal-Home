@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Kitchen from "../assets/images/home away kitchen 2.png"
 
 const LetProperty = () => {
@@ -21,10 +22,12 @@ const LetProperty = () => {
             </p>
             
             {/* CTA Button */}
-            <button className="bg-white w-40 md:w-64 hover:bg-white text-[#1C56BA] font-bold py-2 px-4 rounded-full text-base lg:text-xl transition-all duration-300 transform hover:scale-105 font-[Montserrat]">
-              Get Started
-              <span className="ml-3">→</span>
-            </button>
+            <Link to="/property-management-apartment">
+              <button className="bg-white w-40 md:w-64 hover:bg-white text-[#1C56BA] font-bold py-2 px-4 rounded-full text-base lg:text-xl transition-all duration-300 transform hover:scale-105 font-[Montserrat]">
+                Get Started
+                <span className="ml-3">→</span>
+              </button>
+            </Link>
           </div>
 
           <div className="w-full md:w-3/4 rounded-2xl">

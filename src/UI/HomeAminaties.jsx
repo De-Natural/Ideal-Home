@@ -11,25 +11,25 @@ export default function HomeAminities({
   heading = "Why Rent With Week2week?",
   description = "We simplify the rental experience, giving you verified listings, transparent pricing, and homes that feel like you belong."
 }) {
- 
+
   const amenities = [
     {
       id: 1,
       icon: <SearchviewIcon />,
       label: "Verified Listings Only",
-      description: "Every property is personally inspected and verified"
+      description: "We only list apartments from trusted landlords and verified property owners, no scams, no fake listings."
     },
     {
       id: 2,
       icon: <CustomerSupport />,
       label: "24/7 Support",
-      description: "Round-the-clock assistance for all your needs"
+      description: "Our dedicated support team is available round-the-clock to assist with any issues or maintenance requests."
     },
     {
       id: 3,
       icon: <FlexiblePayment />,
       label: "Flexible Payment Options",
-      description: "Choose from multiple payment plans"
+      description: "Choose how you pay — monthly, quarterly, or annually. We make renting easier and more convenient for you."
     },
     {
       id: 4,
@@ -59,14 +59,14 @@ export default function HomeAminities({
       <p className="text-center text-xs md:text-lg not-italic font-normal leading-6 text-[#777] max-w-2xl">
         {description}
       </p>
-      
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
         {amenities.map((amenity) => (
           <AmenitiesCard
             key={amenity.id}
             icon={amenity.icon}
             label={amenity.label}
-            // description={amenity.description}
+            description={amenity.description}
           />
         ))}
       </div>
