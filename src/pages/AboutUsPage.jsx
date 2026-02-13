@@ -1,6 +1,6 @@
 
 import { useEffect } from "react"
-import Image from "../assets/images/who-we-are-img.png"
+import Image from "../assets/images/whoWeareImg.png"
 import PartnerCTA from "../component/PartnerCTA"
 import teamMembers from "../data/teammembers"
 import MeetTheTeam from "../UI/MeetTheTeam"

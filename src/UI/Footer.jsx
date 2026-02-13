@@ -4,7 +4,7 @@ import { InstagramIcon } from '../assets/Icons/InstagramIcon';
 import { LinkedinIcon } from '../assets/Icons/LinkedinIcon';
 import { SendIcon } from '../assets/Icons/SendIcon';
 import { TiwtterIcon } from '../assets/Icons/TiwtterIcon';
-import CompanyLogo from '../assets/images/week2week-logo.png';
+import CompanyLogo from '../assets/images/week2weeklogo.png';
 
 const Footer = () => {
   return (

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
-import Image from "../assets/images/Bedroom-3.jpg"
+import Image from "../assets/images/bedroom3.jpg"
 import TabNavigation from "../component/TabNavigation"
 import PropertySwiper from "../component/PropertySwiper"
 import RecentlyApartment from "../UI/RecentlyApartment"

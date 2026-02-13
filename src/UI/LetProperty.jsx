@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Kitchen from "../assets/images/home-away-kitchen-2.png"
+import Kitchen from "../assets/images/homeAwaykitchen2.png"
 
 const LetProperty = () => {
   return (

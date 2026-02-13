@@ -1,15 +1,15 @@
 import React from 'react'
 import { SearchIcon } from '../assets/Icons/SearchIcon'
-import Image from '../assets/images/house-model-modern-architecture.png'
+import Image from '../assets/images/house_model_modern_architecture.png'
 import HeroSlider from '../component/HeroSlider'
 
 
-import img1 from "../assets/images/bedroom-1.jpg";
-import img2 from "../assets/images/bedroom-2.jpg";
-import img3 from "../assets/images/bedroom-3.jpg";
-import img4 from "../assets/images/bedroom-4.jpg";
-import img5 from "../assets/images/bedroom-5.jpg";
-import img6 from "../assets/images/bedroom-6.jpg";
+import img1 from "../assets/images/bedroom1.jpg";
+import img2 from "../assets/images/bedroom2.jpg";
+import img3 from "../assets/images/bedroom3.jpg";
+import img4 from "../assets/images/bedroom4.jpg";
+import img5 from "../assets/images/bedroom5.jpg";
+import img6 from "../assets/images/bedroom6.jpg";
 
 export default function AllServiceApartment() {
   // Base apartment meta (titles/descriptions/prices stay the same)
