@@ -1,11 +1,11 @@
 
 import BusinessImage from "../assets/images/BusinessImage.avif"
-import CoooperateImg from  "../assets/images/Cooperate-group-image.png"
+import CoooperateImg from  "../assets/images/Cooperategroupimage.png"
 import TestimonialSection from "../UI/TestimonialSection";
 import SocialFollow from "../component/SocialFollow";
 import HomeAminities from "../UI/HomeAminaties";
 import RecentlyApartment from "../UI/RecentlyApartment";
-import ContractorTabNavigation from "../component/ContractorTabNavigation";
+import ContractorTabNavigation from "../component/ContractorTabNavigation"; 
 
 function BusinessApartment() {
     

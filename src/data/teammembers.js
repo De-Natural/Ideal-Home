@@ -1,7 +1,7 @@
-import teamMember1 from "../assets/images/team-member-1.png"
-import teamMember2 from "../assets/images/team-member-2.png"
-import teamMember3 from "../assets/images/team-member-3.png"
-import teamMember4 from "../assets/images/team-member-4.png"
+import teamMember1 from "../assets/images/teammember1.png"
+import teamMember2 from "../assets/images/teammember2.png"
+import teamMember3 from "../assets/images/teammember3.png"
+import teamMember4 from "../assets/images/teammember4.png"
 
 const teamMembers = [
   {

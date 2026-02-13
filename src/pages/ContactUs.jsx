@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import Image from "../assets/images/house-model-modern-architecture.png"
+import Image from "../assets/images/house_model_modern_architecture.png"
 import BookingForm from "../component/BookingForm";
 import SocialFollow from "../component/SocialFollow";
 import MapImage from "../assets/images/map.png";
