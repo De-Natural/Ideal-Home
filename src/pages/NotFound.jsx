@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import notFound from "../assets/images/404 Error Page not Found with people connecting a plug-pana 1.png"
+import notFound from "../assets/images/404-error.png"
 
 export default function NotFound() {
   return (

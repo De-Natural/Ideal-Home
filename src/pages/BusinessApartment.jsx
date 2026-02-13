@@ -1,6 +1,6 @@
 
 import BusinessImage from "../assets/images/BusinessImage.avif"
-import Buiness from  "../assets/images/home away 10.png"
+import Buiness from  "../assets/images/home-away-10.png"
 import TestimonialSection from "../UI/TestimonialSection";
 import SocialFollow from "../component/SocialFollow";
 import HomeAminities from "../UI/HomeAminaties";

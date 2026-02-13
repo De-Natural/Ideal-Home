@@ -1,8 +1,8 @@
-import Bedroom1 from "../assets/images/Bedroom 1.jpg";
-import Bedroom2 from "../assets/images/Bedroom 2.jpg";
-import Bedroom3 from "../assets/images/Bedroom 3.jpg";
-import Bedroom4 from "../assets/images/Bedroom 4.jpg";
-import Bedroom5 from "../assets/images/Bedroom 5.jpg";
+import Bedroom1 from "../assets/images/bedroom-1.jpg";
+import Bedroom2 from "../assets/images/bedroom-2.jpg";
+import Bedroom3 from "../assets/images/bedroom-3.jpg";
+import Bedroom4 from "../assets/images/bedroom-4.jpg";
+import Bedroom5 from "../assets/images/bedroom-5.jpg";
 
 export const featuredProperties = [
   {

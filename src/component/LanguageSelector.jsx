@@ -35,7 +35,7 @@ const LanguageSelector = () => {
                     onClick={toggleDropdown}
                     className="flex items-center gap-2 pr-2 py-2 bg-white rounded-md hover:bg-gray-50 transition-colors focus:outline-none"
                 >
-                    <div className="w-8 h-6 overflow-hidden rounded-sm shadow-sm border border-gray-100 flex items-center justify-center bg-gray-50">
+                    <div className="w-12 h-10 overflow-hidden rounded-md shadow-sm border border-gray-100 flex items-center justify-center bg-gray-50">
                         <Flag code={currentLanguage.flagCode} className="w-full h-full object-cover" />
                     </div>
                     <div className="text-gray-600 transition-transform duration-200">
@@ -52,7 +52,7 @@ const LanguageSelector = () => {
                     ></div>
                     <div className="absolute right-0 mt-2 w-52 origin-top-right rounded-xl bg-white shadow-2xl ring-1 ring-black ring-opacity-5 z-50 overflow-hidden border border-gray-100 transform transition-all duration-200">
                         <div className="py-2 max-h-[400px] overflow-y-auto">
-                            <div className="px-4 py-2 text-xs font-bold text-gray-400 uppercase tracking-wider">
+                            <div className="px-4 py-2 text-xs font-bold text-gray-400 uppercase tracking-wider border-b border-gray-50 mb-1">
                                 Select Language
                             </div>
                             {languages.map((lang) => (
@@ -63,7 +63,7 @@ const LanguageSelector = () => {
                                         }`}
                                 >
                                     <div className="flex items-center gap-3">
-                                        <div className="w-7 h-5 overflow-hidden rounded-sm shadow-sm border border-gray-100 flex-shrink-0 bg-gray-50">
+                                        <div className="w-10 h-8 overflow-hidden rounded-md shadow-sm border border-gray-100 flex-shrink-0 bg-gray-50 flex items-center justify-center">
                                             <Flag code={lang.flagCode} className="w-full h-full object-cover" />
                                         </div>
                                         <span>{lang.name}</span>
