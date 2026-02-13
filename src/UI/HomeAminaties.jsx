@@ -3,7 +3,7 @@ import { CustomerSupport } from "../assets/Icons/CustomerSupport";
 import { FlexiblePayment } from "../assets/Icons/FlexiblePayment";
 import { HouseKeepingIcon } from "../assets/Icons/HouseKeepingIcon";
 import { KitchenUtensile } from "../assets/Icons/KitchenUtensile";
-import { SearchviewIcon } from "../assets/Icons/searchviewIcon";
+import { SearchviewIcon } from "../assets/Icons/SearchviewIcon";
 import { ToiletIcon } from "../assets/Icons/ToiletIcon";
 import AmenitiesCard from "../component/AmenitiesCard";
 
